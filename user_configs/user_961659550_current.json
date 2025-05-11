@@ -1,0 +1,18 @@
+{
+  "category": "rent",
+  "property_types": [
+    "house",
+    "apartment"
+  ],
+  "cities": [
+    "Paphos"
+  ],
+  "radius": 15,
+  "min_price": 0,
+  "max_price": 2000,
+  "bedrooms": [
+    2,
+    3
+  ],
+  "max_pages": 5
+}

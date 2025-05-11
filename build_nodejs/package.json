@@ -1,0 +1,19 @@
+{
+  "name": "bazaraki-scraper",
+  "version": "1.0.0",
+  "description": "Bazaraki Immobilien Scraper für AWS Lambda",
+  "main": "bazaraki_lambda_scraper.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "axios": "^1.4.0",
+    "jsdom": "^21.1.0",
+    "aws-sdk": "^2.1376.0"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "author": "",
+  "license": "ISC"
+}

@@ -1,0 +1,378 @@
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Extraktion Test Report</title>
+        <style>
+            body { font-family: Arial, sans-serif; line-height: 1.6; padding: 20px; max-width: 1200px; margin: 0 auto; }
+            .header { background-color: #4CAF50; color: white; padding: 20px; text-align: center; margin-bottom: 20px; }
+            .property { border: 1px solid #ddd; margin-bottom: 20px; padding: 15px; border-radius: 5px; }
+            .property:hover { box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+            .title { font-weight: bold; font-size: 1.2em; margin-bottom: 10px; }
+            .price { color: #e63946; font-weight: bold; }
+            .location { color: #666; }
+            .details { display: flex; flex-wrap: wrap; margin: 10px 0; }
+            .detail-item { margin-right: 20px; color: #888; }
+            .image { max-width: 100px; height: auto; margin-top: 10px; }
+            .success { color: green; }
+            .warning { color: orange; }
+            .error { color: red; }
+            table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+            th, td { padding: 12px; text-align: left; border-bottom: 1px solid #ddd; }
+            th { background-color: #f2f2f2; }
+            tr:hover { background-color: #f5f5f5; }
+        </style>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Immobilien Extraktion Test</h1>
+            <p>Zeitpunkt: 10.05.2025 22:14</p>
+            <p>Anzahl der extrahierten Angebote: 60</p>
+        </div>
+        
+        <h2>Zusammenfassung</h2>
+        <table>
+            <tr>
+                <th>Metrik</th>
+                <th>Anzahl</th>
+                <th>Prozent</th>
+            </tr>
+            <tr>
+                <td>Angebote mit ID</td>
+                <td>60</td>
+                <td>100.0%</td>
+            </tr>
+            <tr>
+                <td>Angebote mit Titel</td>
+                <td>60</td>
+                <td>100.0%</td>
+            </tr>
+            <tr>
+                <td>Angebote mit Preis</td>
+                <td>53</td>
+                <td>88.3%</td>
+            </tr>
+            <tr>
+                <td>Angebote mit URL</td>
+                <td>60</td>
+                <td>100.0%</td>
+            </tr>
+            <tr>
+                <td>Angebote mit Standort</td>
+                <td>0</td>
+                <td>0.0%</td>
+            </tr>
+            <tr>
+                <td>Angebote mit Bildern</td>
+                <td>19</td>
+                <td>31.7%</td>
+            </tr>
+        </table>
+        
+        <h2>Extrahierte Angebote</h2>
+    
+        <div class="property">
+            <div class="title">1. 2 Bedroom Apartment To Rent</div>
+            <div class="price">€2.700</div>
+            <div class="location">📍 N/A</div>
+            <div class="details">
+                <div class="detail-item">🏠 ID: 5792829</div>
+                <div class="detail-item">🛏️ N/A</div>
+                <div class="detail-item">🚿 N/A</div>
+                <div class="detail-item">📏 N/A</div>
+                <div class="detail-item">📅 Today</div>
+            </div>
+            <div><a href="https://www.bazaraki.com/adv/5792829_2-bedroom-apartment-to-rent/" target="_blank">Link zur Immobilie</a></div>
+            
+        </div>
+        
+        <div class="property">
+            <div class="title">2. 3 Bedroom Detached House To Rent</div>
+            <div class="price">€2.000</div>
+            <div class="location">📍 N/A</div>
+            <div class="details">
+                <div class="detail-item">🏠 ID: 5745659</div>
+                <div class="detail-item">🛏️ N/A</div>
+                <div class="detail-item">🚿 N/A</div>
+                <div class="detail-item">📏 N/A</div>
+                <div class="detail-item">📅 Today</div>
+            </div>
+            <div><a href="https://www.bazaraki.com/adv/5745659_3-bedroom-detached-house-to-rent/" target="_blank">Link zur Immobilie</a></div>
+            
+        </div>
+        
+        <div class="property">
+            <div class="title">3. Studio Apartment To Rent</div>
+            <div class="price">€650</div>
+            <div class="location">📍 N/A</div>
+            <div class="details">
+                <div class="detail-item">🏠 ID: 5791531</div>
+                <div class="detail-item">🛏️ N/A</div>
+                <div class="detail-item">🚿 N/A</div>
+                <div class="detail-item">📏 N/A</div>
+                <div class="detail-item">📅 Yesterday</div>
+            </div>
+            <div><a href="https://www.bazaraki.com/adv/5791531_studio-apartment-to-rent/" target="_blank">Link zur Immobilie</a></div>
+            
+        </div>
+        
+        <div class="property">
+            <div class="title">4. 3 Bedroom Detached House To Rent</div>
+            <div class="price">€1.400</div>
+            <div class="location">📍 N/A</div>
+            <div class="details">
+                <div class="detail-item">🏠 ID: 5771423</div>
+                <div class="detail-item">🛏️ N/A</div>
+                <div class="detail-item">🚿 N/A</div>
+                <div class="detail-item">📏 N/A</div>
+                <div class="detail-item">📅 Yesterday</div>
+            </div>
+            <div><a href="https://www.bazaraki.com/adv/5771423_3-bedroom-detached-house-to-rent/" target="_blank">Link zur Immobilie</a></div>
+            
+        </div>
+        
+        <div class="property">
+            <div class="title">5. 2 Bedroom Apartment To Rent</div>
+            <div class="price">€5.500  €6.990</div>
+            <div class="location">📍 N/A</div>
+            <div class="details">
+                <div class="detail-item">🏠 ID: 5532617</div>
+                <div class="detail-item">🛏️ N/A</div>
+                <div class="detail-item">🚿 N/A</div>
+                <div class="detail-item">📏 N/A</div>
+                <div class="detail-item">📅 2 days ago</div>
+            </div>
+            <div><a href="https://www.bazaraki.com/adv/5532617_2-bedroom-apartment-to-rent/" target="_blank">Link zur Immobilie</a></div>
+            <img src="https://cdn1.bazaraki.com/media/cache1/91/bf/91bf1499782f4b0a3edd56542b0c43a7.webp" class="image">
+        </div>
+        
+        <div class="property">
+            <div class="title">6. Available Now Office All Inclusive</div>
+            <div class="price">€550</div>
+            <div class="location">📍 N/A</div>
+            <div class="details">
+                <div class="detail-item">🏠 ID: 5593042</div>
+                <div class="detail-item">🛏️ N/A</div>
+                <div class="detail-item">🚿 N/A</div>
+                <div class="detail-item">📏 N/A</div>
+                <div class="detail-item">📅 2 days ago</div>
+            </div>
+            <div><a href="https://www.bazaraki.com/adv/5593042_available-now-office-all-inclusive/" target="_blank">Link zur Immobilie</a></div>
+            <img src="https://cdn1.bazaraki.com/media/cache1/cf/ad/cfaddf3581afd9c46eccbb5ef65d4b76.webp" class="image">
+        </div>
+        
+        <div class="property">
+            <div class="title">7. 2 Bedroom Apartment To Rent</div>
+            <div class="price">€1.300</div>
+            <div class="location">📍 N/A</div>
+            <div class="details">
+                <div class="detail-item">🏠 ID: 5788050</div>
+                <div class="detail-item">🛏️ N/A</div>
+                <div class="detail-item">🚿 N/A</div>
+                <div class="detail-item">📏 N/A</div>
+                <div class="detail-item">📅 3 days ago</div>
+            </div>
+            <div><a href="https://www.bazaraki.com/adv/5788050_2-bedroom-apartment-to-rent/" target="_blank">Link zur Immobilie</a></div>
+            
+        </div>
+        
+        <div class="property">
+            <div class="title">8. 2 Bedroom Apartment To Rent</div>
+            <div class="price">€2.300</div>
+            <div class="location">📍 N/A</div>
+            <div class="details">
+                <div class="detail-item">🏠 ID: 5787524</div>
+                <div class="detail-item">🛏️ N/A</div>
+                <div class="detail-item">🚿 N/A</div>
+                <div class="detail-item">📏 N/A</div>
+                <div class="detail-item">📅 3 days ago</div>
+            </div>
+            <div><a href="https://www.bazaraki.com/adv/5787524_2-bedroom-apartment-to-rent/" target="_blank">Link zur Immobilie</a></div>
+            
+        </div>
+        
+        <div class="property">
+            <div class="title">9. 2 Bedroom Apartment To Rent</div>
+            <div class="price">€750</div>
+            <div class="location">📍 N/A</div>
+            <div class="details">
+                <div class="detail-item">🏠 ID: 5782052</div>
+                <div class="detail-item">🛏️ N/A</div>
+                <div class="detail-item">🚿 N/A</div>
+                <div class="detail-item">📏 N/A</div>
+                <div class="detail-item">📅 3 days ago</div>
+            </div>
+            <div><a href="https://www.bazaraki.com/adv/5782052_2-bedroom-apartment-to-rent/" target="_blank">Link zur Immobilie</a></div>
+            
+        </div>
+        
+        <div class="property">
+            <div class="title">10. 5 Bedroom Penthouse To Rent</div>
+            <div class="price">€7.500</div>
+            <div class="location">📍 N/A</div>
+            <div class="details">
+                <div class="detail-item">🏠 ID: 5766362</div>
+                <div class="detail-item">🛏️ N/A</div>
+                <div class="detail-item">🚿 N/A</div>
+                <div class="detail-item">📏 N/A</div>
+                <div class="detail-item">📅 3 days ago</div>
+            </div>
+            <div><a href="https://www.bazaraki.com/adv/5766362_5-bedroom-penthouse-to-rent/" target="_blank">Link zur Immobilie</a></div>
+            
+        </div>
+        
+        <div class="property">
+            <div class="title">11. 4 Bedroom Villa To Rent</div>
+            <div class="price">€3.800</div>
+            <div class="location">📍 N/A</div>
+            <div class="details">
+                <div class="detail-item">🏠 ID: 5725368</div>
+                <div class="detail-item">🛏️ N/A</div>
+                <div class="detail-item">🚿 N/A</div>
+                <div class="detail-item">📏 N/A</div>
+                <div class="detail-item">📅 4 days ago</div>
+            </div>
+            <div><a href="https://www.bazaraki.com/adv/5725368_4-bedroom-villa-to-rent/" target="_blank">Link zur Immobilie</a></div>
+            
+        </div>
+        
+        <div class="property">
+            <div class="title">12. 1 Bedroom Apartment To Rent</div>
+            <div class="price">€1.200</div>
+            <div class="location">📍 N/A</div>
+            <div class="details">
+                <div class="detail-item">🏠 ID: 5785781</div>
+                <div class="detail-item">🛏️ N/A</div>
+                <div class="detail-item">🚿 N/A</div>
+                <div class="detail-item">📏 N/A</div>
+                <div class="detail-item">📅 4 days ago</div>
+            </div>
+            <div><a href="https://www.bazaraki.com/adv/5785781_1-bedroom-apartment-to-rent/" target="_blank">Link zur Immobilie</a></div>
+            <img src="https://cdn1.bazaraki.com/media/cache1/2b/56/2b56150bddceb92f891daae4f2a66bc3.webp" class="image">
+        </div>
+        
+        <div class="property">
+            <div class="title">13. 1 Bedroom Apartment To Rent</div>
+            <div class="price">€1.600</div>
+            <div class="location">📍 N/A</div>
+            <div class="details">
+                <div class="detail-item">🏠 ID: 5785716</div>
+                <div class="detail-item">🛏️ N/A</div>
+                <div class="detail-item">🚿 N/A</div>
+                <div class="detail-item">📏 N/A</div>
+                <div class="detail-item">📅 4 days ago</div>
+            </div>
+            <div><a href="https://www.bazaraki.com/adv/5785716_1-bedroom-apartment-to-rent/" target="_blank">Link zur Immobilie</a></div>
+            
+        </div>
+        
+        <div class="property">
+            <div class="title">14. 2 Bedroom Apartment To Rent</div>
+            <div class="price">€1.695</div>
+            <div class="location">📍 N/A</div>
+            <div class="details">
+                <div class="detail-item">🏠 ID: 5727139</div>
+                <div class="detail-item">🛏️ N/A</div>
+                <div class="detail-item">🚿 N/A</div>
+                <div class="detail-item">📏 N/A</div>
+                <div class="detail-item">📅 5 days ago</div>
+            </div>
+            <div><a href="https://www.bazaraki.com/adv/5727139_2-bedroom-apartment-to-rent/" target="_blank">Link zur Immobilie</a></div>
+            
+        </div>
+        
+        <div class="property">
+            <div class="title">15. 3 Bedroom Apartment To Rent</div>
+            <div class="price">€2.500</div>
+            <div class="location">📍 N/A</div>
+            <div class="details">
+                <div class="detail-item">🏠 ID: 5782957</div>
+                <div class="detail-item">🛏️ N/A</div>
+                <div class="detail-item">🚿 N/A</div>
+                <div class="detail-item">📏 N/A</div>
+                <div class="detail-item">📅 5 days ago</div>
+            </div>
+            <div><a href="https://www.bazaraki.com/adv/5782957_3-bedroom-apartment-to-rent/" target="_blank">Link zur Immobilie</a></div>
+            
+        </div>
+        
+        <div class="property">
+            <div class="title">16. Prime Office Space For Rent In The Heart Of Nicosia</div>
+            <div class="price">€4.300</div>
+            <div class="location">📍 N/A</div>
+            <div class="details">
+                <div class="detail-item">🏠 ID: 5781330</div>
+                <div class="detail-item">🛏️ N/A</div>
+                <div class="detail-item">🚿 N/A</div>
+                <div class="detail-item">📏 N/A</div>
+                <div class="detail-item">📅 6 days ago</div>
+            </div>
+            <div><a href="https://www.bazaraki.com/adv/5781330_prime-office-space-for-rent-in-the-heart-of-nicosia/" target="_blank">Link zur Immobilie</a></div>
+            
+        </div>
+        
+        <div class="property">
+            <div class="title">17. 2 Bedroom Apartment To Rent</div>
+            <div class="price">€1.200</div>
+            <div class="location">📍 N/A</div>
+            <div class="details">
+                <div class="detail-item">🏠 ID: 5764285</div>
+                <div class="detail-item">🛏️ N/A</div>
+                <div class="detail-item">🚿 N/A</div>
+                <div class="detail-item">📏 N/A</div>
+                <div class="detail-item">📅 1 week ago</div>
+            </div>
+            <div><a href="https://www.bazaraki.com/adv/5764285_2-bedroom-apartment-to-rent/" target="_blank">Link zur Immobilie</a></div>
+            
+        </div>
+        
+        <div class="property">
+            <div class="title">18. Prime Office Space For Rent Prime Office Space For Rent Dimokritou Avenue 12</div>
+            <div class="price">€3.000</div>
+            <div class="location">📍 N/A</div>
+            <div class="details">
+                <div class="detail-item">🏠 ID: 5777144</div>
+                <div class="detail-item">🛏️ N/A</div>
+                <div class="detail-item">🚿 N/A</div>
+                <div class="detail-item">📏 N/A</div>
+                <div class="detail-item">📅 1 week ago</div>
+            </div>
+            <div><a href="https://www.bazaraki.com/adv/5777144_prime-office-space-for-rent-prime-office-space-for-rent-dimokritou-avenue-12/" target="_blank">Link zur Immobilie</a></div>
+            
+        </div>
+        
+        <div class="property">
+            <div class="title">19. City Tower Commercial Business Center A Grade Of 11 Floors</div>
+            <div class="price">€238.500</div>
+            <div class="location">📍 N/A</div>
+            <div class="details">
+                <div class="detail-item">🏠 ID: 5764757</div>
+                <div class="detail-item">🛏️ N/A</div>
+                <div class="detail-item">🚿 N/A</div>
+                <div class="detail-item">📏 N/A</div>
+                <div class="detail-item">📅 2 weeks ago</div>
+            </div>
+            <div><a href="https://www.bazaraki.com/adv/5764757_city-tower-commercial-business-center-a-grade-of-11-floors/" target="_blank">Link zur Immobilie</a></div>
+            <img src="https://cdn1.bazaraki.com/media/cache1/c7/90/c790333116a5d92a34d2eed0da057f96.webp" class="image">
+        </div>
+        
+        <div class="property">
+            <div class="title">20. Studio Apartment To Rent</div>
+            <div class="price">€630</div>
+            <div class="location">📍 N/A</div>
+            <div class="details">
+                <div class="detail-item">🏠 ID: 5365281</div>
+                <div class="detail-item">🛏️ N/A</div>
+                <div class="detail-item">🚿 N/A</div>
+                <div class="detail-item">📏 N/A</div>
+                <div class="detail-item">📅 1 month ago</div>
+            </div>
+            <div><a href="https://www.bazaraki.com/adv/5365281_studio-apartment-to-rent/" target="_blank">Link zur Immobilie</a></div>
+            
+        </div>
+        <p><em>... und 40 weitere Angebote</em></p>
+    </body>
+    </html>
+    

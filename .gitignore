@@ -1,0 +1,56 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Node.js
+node_modules/
+npm-debug.log
+yarn-debug.log*
+yarn-error.log*
+.npm
+.node_repl_history
+*.tgz
+.yarn-integrity
+
+# Virtual Environment
+venv/
+env/
+ENV/
+.env
+.env.example
+
+# IDE und Editor Dateien
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# AWS und Terraform
+.terraform/
+terraform.tfstate
+terraform.tfstate.backup
+.terraform.lock.hcl
+terraform.tfvars
+
+# Lambda Package
+lambda_function_nodejs.zip
+lambda_function.zip
