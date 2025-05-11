@@ -1,4 +1,4 @@
-# Bazaraki Property Scraper
+# Real Estate Scraper
 
 A Terraform-based AWS project that scans the real estate website twice daily to identify new and removed property listings and send notifications via Telegram.
 
