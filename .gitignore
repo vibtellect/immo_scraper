@@ -49,6 +49,14 @@ ENV/
 terraform.tfstate
 terraform.tfstate.backup
 .terraform.lock.hcl
+
+# Lokaler S3-Speicher für Tests
+local_s3_storage/
+
+# Build-Dateien
+build_nodejs/
+lambda_function_nodejs.zip
+build/
 terraform.tfvars
 
 # Lambda Package

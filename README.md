@@ -5,12 +5,16 @@ A Terraform-based AWS project that scans the real estate website twice daily to 
 ## Key Features
 
 - Node.js Lambda function that efficiently scans a real estate website
-- Optimized scraping algorithm that compares existing Ad-IDs before scraping details
+- **Optimized scraping algorithm** that compares existing Ad-IDs before scraping details
+- **Improved ID extraction and normalization** for consistent comparison between runs
+- **Persistent local state storage** for testing without AWS
 - Smart filtering for apartments and houses with customizable parameters
 - S3 bucket for storing scraping results between runs
 - CloudWatch Events for execution twice daily (8:00 and 20:00 UTC)
 - Intelligent comparison between runs to identify new and removed listings
-- Detailed Telegram notifications with images, prices, and property links
+- **Enhanced Telegram notifications** with images, prices, and property links
+- **Adaptive rate limiting** to avoid Telegram API restrictions
+- **Language filtering** for descriptions (German and Russian preferred)
 
 ## Project Structure
 
@@ -22,6 +26,8 @@ immo_scraper/
 ├── lambda_function_nodejs.zip    # Packaged Lambda function
 ├── src/
 │   ├── bazaraki_lambda_scraper.js # Main Node.js Lambda function
+│   ├── run_local_scraper.js      # Script to run the scraper locally
+│   ├── download_s3_file.js       # Script to download files from S3
 │   └── package.json              # Node.js dependencies
 └── terraform/
     ├── main.tf                   # Main Terraform configuration
@@ -29,6 +35,31 @@ immo_scraper/
     ├── outputs.tf                # Output values
     └── terraform.tfvars          # Terraform variables values
 ```
+
+## Local Testing
+
+You can now run the scraper locally without deploying to AWS:
+
+1. Install dependencies:
+   ```bash
+   cd src
+   npm install
+   ```
+
+2. Configure Telegram notifications (optional):
+   - Open `src/run_local_scraper.js`
+   - Add your Telegram Bot Token and Chat ID
+
+3. Run the scraper locally:
+   ```bash
+   node src/run_local_scraper.js
+   ```
+
+The local scraper will:
+- Use a local file system to simulate S3 storage
+- Store state in `local_s3_storage/s3_storage.json`
+- Skip actual Telegram API calls if no credentials are provided
+- Print detailed logs about the scraping process
 
 ## AWS Architecture (Terraform)
 
@@ -163,17 +194,39 @@ cp terraform/terraform.tfvars.example terraform/terraform.tfvars
 
 ### Local Testing
 
-**Test the Telegram notification function:**
+The project includes a comprehensive test script to verify all functionality before deployment:
+
+**Test the optimized Telegram notification format:**
 
 ```bash
-python test_telegram.py
+node test_optimized_scraper.js test-message
 ```
 
-**Simulate an AWS Lambda invocation locally:**
+**Test the optimized ID comparison algorithm:**
 
 ```bash
-python test_lambda.py
+node test_optimized_scraper.js test-ids
 ```
+
+**Run a limited scraping test (1 page only):**
+
+```bash
+node test_optimized_scraper.js test-scraping
+```
+
+**Simulate a full AWS Lambda invocation locally:**
+
+```bash
+node test_optimized_scraper.js full-run
+```
+
+**Get help on available test commands:**
+
+```bash
+node test_optimized_scraper.js
+```
+
+> Note: The test script will automatically detect missing Telegram credentials and run in simulation mode if needed.
 
 ### Deployment to AWS
 

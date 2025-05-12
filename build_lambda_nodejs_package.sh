@@ -15,8 +15,11 @@ mkdir -p "${BUILD_DIR}"
 rm -rf "${BUILD_DIR:?}"/*
 rm -f "${OUT_FILE}"
 
+# Erstelle Verzeichnisstruktur
+mkdir -p "${BUILD_DIR}/src"
+
 # JavaScript-Dateien und package.json kopieren
-cp "${SRC_DIR}/bazaraki_lambda_scraper.js" "${BUILD_DIR}/index.js"
+cp "${SRC_DIR}/bazaraki_lambda_scraper.js" "${BUILD_DIR}/src/"
 cp "${SRC_DIR}/package.json" "${BUILD_DIR}/"
 
 # Nach build_dir wechseln

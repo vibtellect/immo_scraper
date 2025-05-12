@@ -117,11 +117,11 @@ locals {
 resource "aws_lambda_function" "scraper" {
   function_name    = var.project_name
   role             = aws_iam_role.lambda_role.arn
-  handler          = "index.handler"
-  runtime          = "nodejs16.x"
+  handler          = "src/bazaraki_lambda_scraper.handler"
+  runtime          = "nodejs18.x"
   filename         = local.lambda_nodejs_zip_path
   source_code_hash = filebase64sha256(local.lambda_nodejs_zip_path)
-  timeout          = 300
+  timeout          = 900  # Erhöht auf das Maximum von 15 Minuten
   memory_size      = 512
 
   environment {
@@ -130,7 +130,8 @@ resource "aws_lambda_function" "scraper" {
       RESULTS_PREFIX = "results/",
       TELEGRAM_BOT_TOKEN = var.telegram_bot_token,
       TELEGRAM_CHAT_ID = var.telegram_chat_id,
-      DEBUG_MODE = "false"
+      DEBUG_MODE = "false",
+      FORCE_NOTIFICATION = "false" # Nur für den ersten Lauf auf "true" setzen
     }
   }
 }
